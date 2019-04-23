@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'echo Configuring Build environment using docker..'
                 sh '''
-                    docker run --rm -ti \
+                    docker run --rm -i \
                     --name lambda_build \
 		            --volume $(pwd):/opt/app \
 		            amazonlinux:latest \
